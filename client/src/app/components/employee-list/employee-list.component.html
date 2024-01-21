@@ -1,0 +1,52 @@
+<div>
+  <div
+    class="flex flex-row lg:gap-14 border-b py-3 sm:gap-2 items-center justify-center w-full"
+  >
+    <input
+      type="text"
+      class="w-[50px] pointer-events-none font-bold"
+      value="No."
+    />
+    <input
+      type="text"
+      class="w-[83px] pointer-events-none font-bold"
+      value="First Name"
+    />
+    <input
+      type="text"
+      class="w-[83px] pointer-events-none font-bold"
+      value="Last Name"
+    />
+    <input
+      type="text"
+      class="w-[170px] pointer-events-none font-bold"
+      value="Email"
+    />
+    <input
+      type="text"
+      class="w-[80px] pointer-events-none font-bold"
+      value="Salary"
+    />
+    <input
+      type="text"
+      class="w-[83px] pointer-events-none font-bold"
+      value="Date"
+    />
+
+    <div class="flex flex-row gap-5 font-bold px-7">
+      <span>Actions</span>
+    </div>
+  </div>
+
+  <div *ngFor="let employee of employees">
+    <app-employee-item
+      [id]="employee.id"
+      [firstName]="employee.firstName"
+      [lastName]="employee.lastName"
+      [email]="employee.email"
+      [salary]="employee.salary"
+      [date]="employee.date"
+    >
+    </app-employee-item>
+  </div>
+</div>

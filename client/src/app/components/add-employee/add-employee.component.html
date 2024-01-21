@@ -1,0 +1,50 @@
+<div class="flex flex-col justify-center items-center gap-3">
+  <button
+    class="bg-blue-400 rounded-lg text-white font-bold px-5 p-2 w-[150px]"
+    (click)="setDisplayComponent()"
+  >
+    Add Employee
+  </button>
+
+  <div
+    [class.hidden]="!displayComponent"
+    class="flex flex-col justify-center items-center gap-3"
+  >
+    <div
+      class="flex flex-row gap-14 border-b py-5 items-center justify-center w-full"
+    >
+      <input
+        type="text"
+        placeholder="Fist Name"
+        class="w-[80px]"
+        [(ngModel)]="newEmployee.firstName"
+      />
+      <input
+        type="text"
+        placeholder="Last Name"
+        class="w-[80px]"
+        [(ngModel)]="newEmployee.lastName"
+      />
+      <input type="email" placeholder="Email" [(ngModel)]="newEmployee.email" />
+      <input
+        type="text"
+        placeholder="Salary"
+        class="w-[80px]"
+        [(ngModel)]="newEmployee.salary"
+      />
+      <input
+        type="text"
+        placeholder="Date"
+        class="w-[80px]"
+        [(ngModel)]="newEmployee.date"
+      />
+    </div>
+
+    <button
+      (click)="addEmployee()"
+      class="bg-blue-400 px-3 py-1 rounded-lg text-white font-bold"
+    >
+      Submit
+    </button>
+  </div>
+</div>

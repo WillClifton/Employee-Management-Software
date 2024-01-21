@@ -1,0 +1,57 @@
+<div
+  class="flex flex-row lg:gap-14 border-b py-3 sm:gap-2 items-center justify-center w-full"
+  [ngClass]="{ 'bg-gray-100': enableEdit, '': !enableEdit }"
+>
+  <input [(ngModel)]="id" type="number" class="w-[50px] pointer-events-none" />
+  <input
+    type="text"
+    [(ngModel)]="firstName"
+    class="w-[83px] pointer-events-none"
+    [ngClass]="{
+      '': enableEdit,
+      'pointer-events-none': !enableEdit
+    }"
+  />
+  <input
+    type="text"
+    [(ngModel)]="lastName"
+    class="w-[83px] pointer-events-none"
+    [ngClass]="{ '': enableEdit, 'pointer-events-none': !enableEdit }"
+  />
+  <input
+    type="text"
+    [(ngModel)]="email"
+    class="w-[170px] pointer-events-none"
+    [ngClass]="{ '': enableEdit, 'pointer-events-none': !enableEdit }"
+  />
+  <input
+    type="text"
+    [(ngModel)]="salary"
+    class="w-[80px] pointer-events-none"
+    [ngClass]="{ '': enableEdit, 'pointer-events-none': !enableEdit }"
+  />
+  <input
+    type="text"
+    [(ngModel)]="date"
+    class="w-[83px]"
+    [ngClass]="{ '': enableEdit, 'pointer-events-none': !enableEdit }"
+  />
+
+  <div class="flex flex-row gap-5">
+    <button
+      *ngIf="enableEdit"
+      (click)="saveEmployee()"
+      class="border px-2 bg-green-500"
+    >
+      Save
+    </button>
+    <button
+      *ngIf="!enableEdit"
+      (click)="editEmployee()"
+      class="border px-2 bg-blue-400"
+    >
+      Edit
+    </button>
+    <button class="border bg-red-400" (click)="deleteEmployee()">Delete</button>
+  </div>
+</div>
