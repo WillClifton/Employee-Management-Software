@@ -4,6 +4,6 @@
 -> backend/application.json -> add Mongo Connection URI
 
 <h1>Features:</h1>
-- User authentication - Products API - CRUD operations for the shopping cart - Stripe API for payment processing - Responsive UI with Tailwind CSS - State management using Redux
+- State Management with  NgRx - Employee CRUD operations - Response UI with tailwindcss  
 <h1>Technologies Used:</h1>
-- MongoDB - Express.js - React - Node.js - Stripe API - Tailwind CSS - Redux
+- MongoDB - ASP.NET Core 7 - Angular 17 - Typescript - NgRx - Tailwind CSS
