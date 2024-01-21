@@ -1,5 +1,5 @@
 <h1>Setup:</h1>
--> client/src/app/environment.ts -> set to api url
+-> client/src/app/environment.ts -> chagne to backend API url
 
 -> backend/application.json -> add Mongo Connection URI
 
